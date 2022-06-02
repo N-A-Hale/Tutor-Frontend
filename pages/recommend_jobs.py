@@ -9,22 +9,21 @@ def fix_titles(df):
     new_col ={col: col.replace('_', ' ').title() for col in df.columns}
     return df.rename(columns = new_col)
 
-
-
-
 def app():
     """
     Page shows all jobs for browsing through
     """
 
-    st.write('''We can provide you with a number of jobs that are best suited to your skills.
+    st.write('''
+             Are you looking for a job in the data science field?
+             We can provide you with a number of jobs that are best suited to your skills.
              Please tell us a bit about yourself and your experience!''')
     st.write('''Please tick the boxes below to describe your skills.''')
 
     # List of skills
-    skill_list = ['Excellent Communication Skills', 'create', 'Data Analysis', 'develop',
-                'development', 'Data Engineering', 'information', 'Project Management',
-                'ML Model Build', 'Python Programming', 'science', 'software', 'SQL', 'systems']
+    skill_list = ['Communication Skills', 'Statistics', 'Data Analysis', 'Process Big Data',
+                'Data Visualization', 'Data Engineering', 'Model Deployment', 'Project Management',
+                'ML Model Build', 'Programming', 'Data Science', 'Software Development', 'SQL', 'Excel']
 
 
     # User input and data collection
@@ -43,7 +42,7 @@ def app():
         else:
             input_collector[skill] = 0
 
-    st.slider('Years of Experience in Data Science',0, 20, 5)
+    st.slider('Years of Experience in Data Science',0, 20, 0)
 
     if st.checkbox("Happy with your descriptions above?"):
         if sum(input_collector.values()) > 0:
