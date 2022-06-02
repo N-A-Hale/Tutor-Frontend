@@ -4,7 +4,7 @@ with open("requirements.txt") as f:
     content = f.readlines()
 requirements = [x.strip() for x in content]
 
-setup(name="data_science_skills_app",
+setup(name="data_scientist_skills",
       version="1.0",
       description="data_science_skills streamlit",
       packages=find_packages(),

@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/phuongnguyen/code/honnsey/data_science_skills_website'
+pip install -r requirements.txt
+make: Leaving directory `/Users/phuongnguyen/code/honnsey/data_science_skills_website'
+ 

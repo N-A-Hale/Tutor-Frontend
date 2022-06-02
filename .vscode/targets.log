@@ -1,3 +1,4 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # GNU Make 3.81
 # Copyright (C) 2006  Free Software Foundation, Inc.
 # This is free software; see the source for copying conditions.
@@ -6,10 +7,8 @@
 
 # This program built for i386-apple-darwin11.3.0
  
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Thu Jun  2 12:31:46 2022
+# Make data base, printed on Thu Jun  2 14:26:54 2022
 
 # Variables
 
@@ -46,7 +45,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/nd/pgsq9c7134jfmgn899bxhdjc0000gn/T/vscode-ipc-1b494b65-2ac4-4bb0-9b27-1f91a6fc6f48.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/nd/pgsq9c7134jfmgn899bxhdjc0000gn/T/vscode-ipc-9d2c197c-a0b6-44fb-b4f0-4dbd73524a8b.sock
 # environment
 VSCODE_CWD = /Users/phuongnguyen/code/honnsey/data_scientist_skills
 # environment
@@ -222,7 +221,7 @@ install_requirements:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:03:58
+#  Last modified 2022-06-02 12:57:52
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -241,7 +240,7 @@ heroku_create_app:
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 20):
-	-@heroku create ${data-science-skills}
+	-@heroku create ${data-scientist-skills}
 	
 
 deploy_heroku:
@@ -302,6 +301,8 @@ install:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Jun  2 12:31:46 2022
+# Finished Make data base on Thu Jun  2 14:26:54 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
