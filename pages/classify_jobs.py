@@ -12,7 +12,7 @@ def app():
                 There are many different roles in the field of data science, and we
                 can help you categorise what you're looking for!
              ''')
-    st.write("You can choose one of the two options below")
+    # st.write("You can choose one of the two options below")
 
 
 
@@ -21,7 +21,7 @@ def app():
     input = st.text_area('Job Description', placeholder = 'Enter Job Description Here')
     if input:
         job_level_type = job_class_api_request(input)
-        st.write(job_level_type)
+        st.success(f"A {job_level_type['job level']} will be best suited for this job description.")
 
 
     # Buttons reset the page after a user enters input so I had to default to a

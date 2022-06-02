@@ -23,8 +23,12 @@ def app():
     #    'cleaned_title']
     # st.dataframe(get_cached_data()[['job_title','company_name','location','industry','job_description'
     #                                 ]])
-    st.markdown('''**Below are some graphical representation of the jobs available on our website!
-                Have a look!**''')
+
+    st.markdown('''
+                #### Welcome to **** - a website curated for job seekers and recruiters in the data science field!
+                ''')
+    st.info('''Below are some graphical representation of the jobs available on our website!
+                Have a look!''')
 
     st.write("This is where our jobs come from!")
     locations = Image.open("images/map.png")

@@ -35,7 +35,7 @@ def app():
         else:
             input_collector[skill] = 0
 
-    st.slider('Years of Experience in Data Science',1, 20, 5)
+    st.slider('Years of Experience in Data Science',0, 20, 5)
 
     if st.checkbox("Happy with your descriptions above?"):
         if sum(input_collector.values()) > 0:
@@ -43,7 +43,8 @@ def app():
 
             #Returns pd.DataFrame from the model, can be manipulated as desired
             answer = jobs_rec_api_request(input_collector, skill_list)
-            st.write(answer)
+            st.write(answer[['job_title','job_description',
+                             'company_name','location']])
 
         else:
             st.info('Would you be interested in some data science courses to improve your skill set?')

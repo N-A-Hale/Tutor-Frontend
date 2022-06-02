@@ -2,7 +2,7 @@ import streamlit as st
 
 # Custom imports
 from multipage import MultiPage
-from pages import graphs, recommend_jobs, classify_jobs
+from pages import graphs, recommend_jobs, classify_jobs, aboutus
 
 # Create an instance of the app
 app = MultiPage()
@@ -14,6 +14,8 @@ st.title("From Data to $$$")
 app.add_page("Data Insights", graphs.app)
 app.add_page("Job Recommendation", recommend_jobs.app)
 app.add_page("Classify Job", classify_jobs.app)
+app.add_page("About Us", aboutus.app)
+
 
 
 # The main app
