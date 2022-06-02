@@ -17,7 +17,7 @@ heroku_login:
 	-@heroku login
 
 heroku_create_app:
-	-@heroku create ${data-science-skills}
+	-@heroku create ${data-scientist-skills}
 
 deploy_heroku:
 	-@git push heroku master
