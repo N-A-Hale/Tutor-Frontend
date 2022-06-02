@@ -4,6 +4,14 @@ import pandas as pd
 
 from pages.model_requests import jobs_rec_api_request
 
+def fix_titles(df):
+    """Formats the columns to standardized titles"""
+    new_col ={col: col.replace('_', ' ').title() for col in df.columns}
+    return df.rename(columns = new_col)
+
+
+
+
 def app():
     """
     Page shows all jobs for browsing through
@@ -43,8 +51,14 @@ def app():
 
             #Returns pd.DataFrame from the model, can be manipulated as desired
             answer = jobs_rec_api_request(input_collector, skill_list)
-            st.write(answer[['job_title','job_description',
+
+            #Uses fix title formatting of chosen columns
+            answer = fix_titles(answer[['job_title','job_description',
                              'company_name','location']])
+
+            #Prints tables of each job posting that matches presented skills
+            for index in range(len(answer)):
+                st.table(answer.iloc[index])
 
         else:
             st.info('Would you be interested in some data science courses to improve your skill set?')
