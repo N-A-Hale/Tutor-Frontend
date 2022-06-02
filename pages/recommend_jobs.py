@@ -40,8 +40,10 @@ def app():
     if st.checkbox("Happy with your descriptions above?"):
         if sum(input_collector.values()) > 0:
             st.success('Below are the top 5 jobs that we recommend you to apply!')
-            answer = jobs_rec_api_request(input_collector)
+
+            #Returns pd.DataFrame from the model, can be manipulated as desired
+            answer = jobs_rec_api_request(input_collector, skill_list)
             st.write(answer)
-            # st.write(input_collector)
+
         else:
             st.info('Would you be interested in some data science courses to improve your skill set?')
