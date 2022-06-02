@@ -17,6 +17,7 @@ def app():
         title = st.text_input('Job Description','Enter Job Description Here')
     # title will then be the input for model prediction
 
+
     if columns[1].button('Upload a Job Description'):
         st.set_option('deprecation.showfileUploaderEncoding', False)
         uploaded_file = st.file_uploader("Choose a CSV file", type="csv")

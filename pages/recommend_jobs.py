@@ -2,6 +2,8 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
+from pages.model_requests import jobs_rec_api_request
+
 def app():
     """
     Page shows all jobs for browsing through
@@ -38,7 +40,8 @@ def app():
     if st.checkbox("Happy with your descriptions above?"):
         if sum(input_collector.values()) > 0:
             st.success('Below are the top 5 jobs that we recommend you to apply!')
-                ## display dataframe of recommended jobs below
-
+            answer = jobs_rec_api_request(input_collector)
+            st.write(answer)
+            # st.write(input_collector)
         else:
             st.info('Would you be interested in some data science courses to improve your skill set?')
