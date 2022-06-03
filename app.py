@@ -12,8 +12,8 @@ st.title("TUTOR")
 
 # Add all your applications (pages) here
 app.add_page("Data Insights", graphs.app)
-app.add_page("Job Recommendation", recommend_jobs.app)
-app.add_page("Classify Job", classify_jobs.app)
+app.add_page("For Job Seekers", recommend_jobs.app)
+app.add_page("For Recruiters", classify_jobs.app)
 app.add_page("About Us", aboutus.app)
 
 
