@@ -25,7 +25,7 @@ def app():
     #                                 ]])
 
     st.markdown('''
-                #### Welcome to **** - a website curated for job seekers and recruiters in the data science field!
+                #### Welcome to TUTOR - a website curated for job seekers and recruiters in the data science field!
                 ''')
     st.info('''Below are some graphical representation of the jobs available on our website!
                 Have a look!''')

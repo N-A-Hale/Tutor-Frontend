@@ -8,7 +8,7 @@ from pages import graphs, recommend_jobs, classify_jobs, aboutus
 app = MultiPage()
 
 # Title of the main page
-st.title("From Data to $$$")
+st.title("TUTOR")
 
 # Add all your applications (pages) here
 app.add_page("Data Insights", graphs.app)
